@@ -8,19 +8,17 @@ var ProjectList = React.createClass({
 		var that = this;
     var rowNum = 0;
   	this.props.projects.forEach(function(project) {
-      rowNum++;
     	projects.push(
     		<Project 
     			key={project.name} 
     			project={project} 
-          rowNum={rowNum%2}
     		/>
     	);
   	});
     return (
-    	<ol>
+    	<div className='container-fluid text-center bg-grey'>
       	{projects}
-    	</ol>
+    	</div>
     );
   }
 }); 

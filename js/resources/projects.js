@@ -9,13 +9,13 @@ var projects = [
   	id: 'raytracer',
   	name: 'Raytracer', 
   	img: 'img/projects/raytracer/pic1.png',
-  	description: 'Generates 3D rendering with interactive control, based on input of Bezier patches'
+  	description: 'Generates 3D rendering based on input shapes'
   },
   {
   	id: 'shader',
   	name: '3D Shader', 
   	img: 'img/thumbnails/shader_thumbnail.png',
-  	description: 'Generates 3D rendering with interactive control, based on input of Bezier patches'
+  	description: 'Generates 3D sphere based on lighting position and color'
   },
   {
     id: 'cpu',

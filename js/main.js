@@ -40,7 +40,7 @@ var App = React.createClass({
       <div>
         <nav className="navbar navbar-inverse">
           <ul className="nav navbar-nav">
-            <div className="navbar-brand"><Link to="/">Miles Lindheimer</Link></div>
+            <li role="presentation"><Link to="/">Miles Lindheimer</Link></li>
             <li role="presentation"><Link to="/">Home</Link></li>
             <li role="presentation"><Link to="projects">Projects</Link></li>
             <li role="presentation"><Link to="contact">Contact</Link></li>

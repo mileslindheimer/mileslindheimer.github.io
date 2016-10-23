@@ -1,4 +1,5 @@
 var React = require('react');
+var Link = require('react-router').Link;
 
 var ProjectDetail = React.createClass({
 	componentDidMount: function() {
@@ -9,6 +10,7 @@ var ProjectDetail = React.createClass({
   render: function() {
     return (
       <div className='jumbotron'>
+      <Link to='projects'>Back</Link>
       <h1>{this.props.project.name}</h1>
     	<li className='col-md-6 list-group-item'>
     		<div className='row'>

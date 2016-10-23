@@ -9,14 +9,12 @@ var Project = React.createClass({
 	},
   render: function() {
     return (
-      <div className={'container-fluid bg-'+this.props.rowNum+' text-center'}>
         <Link to={'projects/'+this.props.project.id}>
-      	<li className='row'>
+      	<div className='col-sm-4 thumbnail project-thumbnail'>
+          <img src={this.props.project.img}/>
       		<h4>{this.props.project.name}</h4>
-        	<img className='img-circle' src={this.props.project.img}/>
-      	</li>
+      	</div>
         </Link>
-      </div>
     );
   }
 }); 

@@ -1,6 +1,11 @@
 html, body {
 	height: 100%;
   text-align: center;
+  overflow-y: scroll;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .contact-info {
@@ -11,18 +16,26 @@ html, body {
    overflow: hidden;
 }
 
-.img-circle {
-    width:  200px;
-    height: 200px;
-}
-a:hover {text-decoration: none;}
-
-.bg-1 { 
-  background-color: #eee;
-  padding-bottom: 20px;
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
 }
 
-.bg-0 { 
-    background-color: #ddd;
-    padding-bottom: 20px;
+.thumbnail img {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.thumbnail:hover  {
+  background-color: lightgray;
+}
+
+.project-thumbnail {
+  color: gray;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
 }
