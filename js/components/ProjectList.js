@@ -6,16 +6,19 @@ var ProjectList = React.createClass({
   render: function() {
 		var projects = [];
 		var that = this;
+    var rowNum = 0;
   	this.props.projects.forEach(function(project) {
+      rowNum++;
     	projects.push(
     		<Project 
     			key={project.name} 
     			project={project} 
+          rowNum={rowNum%2}
     		/>
     	);
   	});
     return (
-    	<ol className='ProductList'>
+    	<ol>
       	{projects}
     	</ol>
     );

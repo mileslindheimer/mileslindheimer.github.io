@@ -2,21 +2,23 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Router = require('react-router').Router;
 var Route = require('react-router').Route;
+var IndexRoute = require('react-router').IndexRoute;
 var Link = require('react-router').Link;
-var browserHistory = require('react-router').browserHistory;
+var hashHistory = require('react-router').hashHistory;
 
 var Project = require('./components/Project');
 var ProjectDetail = require('./components/ProjectDetail');
 var ProjectList = require('./components/ProjectList');
+var HomePage = require('./components/HomePage');
 var ContactPage = require('./components/ContactPage');
-var projects = require('./components/projects');
+var ProjectStore = require('./stores/ProjectStore');
 
 var ProjectsPage = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className='page-header'>
         <h1>Projects</h1>
-        <ProjectList projects={projects} />
+        <ProjectList projects={ProjectStore.getAll()} />
       </div>
     )
   }
@@ -26,8 +28,7 @@ var ProjectDetailPage = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>{this.props.params.id}</h1>
-        <ProjectDetail projects={projects} />
+        <ProjectDetail project={ProjectStore.getById(this.props.params.id)} />
       </div>
     )
   }
@@ -37,12 +38,12 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <nav className="navbar navbar-default">
-          <div className="navbar-brand"><Link to="/">Miles Lindheimer</Link></div>
+        <nav className="navbar navbar-inverse">
           <ul className="nav navbar-nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="projects">Projects</Link></li>
-            <li><Link to="contact">Contact</Link></li>
+            <div className="navbar-brand"><Link to="/">Miles Lindheimer</Link></div>
+            <li role="presentation"><Link to="/">Home</Link></li>
+            <li role="presentation"><Link to="projects">Projects</Link></li>
+            <li role="presentation"><Link to="contact">Contact</Link></li>
           </ul>
         </nav>
         {this.props.children}  
@@ -52,11 +53,11 @@ var App = React.createClass({
 });
 
 ReactDOM.render((
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <Route path="projects" component={ProjectsPage}>
-        <Route path=":id" component={ProjectDetailPage}/>
-      </Route>
+      <IndexRoute component={HomePage}/>
+      <Route path="projects" component={ProjectsPage}/>
+      <Route path="projects/:id" component={ProjectDetailPage}/>
       <Route path="contact" component={ContactPage}/>
     </Route>
   </Router>

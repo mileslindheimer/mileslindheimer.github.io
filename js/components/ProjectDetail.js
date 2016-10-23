@@ -8,6 +8,8 @@ var ProjectDetail = React.createClass({
 	},
   render: function() {
     return (
+      <div className='jumbotron'>
+      <h1>{this.props.project.name}</h1>
     	<li className='col-md-6 list-group-item'>
     		<div className='row'>
       		<img src={this.props.project.img} width='200'/>
@@ -21,6 +23,7 @@ var ProjectDetail = React.createClass({
         <div className='row'>
 	      </div>
     	</li>
+      </div>
     );
   }
 }); 
