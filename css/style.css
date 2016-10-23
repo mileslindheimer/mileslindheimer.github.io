@@ -8,6 +8,13 @@ a:hover {
   text-decoration: none;
 }
 
+.anchor{
+  display: block;
+  height: 65px;
+  margin-top: -65px;
+  visibility: hidden;
+}
+
 .contact-info {
     text-align: center;
 }
@@ -38,4 +45,8 @@ a:hover {
 
 .bg-grey {
   background-color: #f6f6f6;
+}
+
+.back {
+  float: left;
 }

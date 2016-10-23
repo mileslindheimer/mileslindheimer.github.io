@@ -10,7 +10,7 @@ var ProjectDetail = React.createClass({
   render: function() {
     return (
       <div className='jumbotron'>
-      <Link to='projects'>Back</Link>
+      <Link to='projects' className='btn btn-default back' role='button'>Back</Link>
       <h1>{this.props.project.name}</h1>
     	<li className='col-md-6 list-group-item'>
     		<div className='row'>
@@ -22,8 +22,6 @@ var ProjectDetail = React.createClass({
       	<div className='list-group-item-text'>
         	{this.props.project.description}
         </div>
-        <div className='row'>
-	      </div>
     	</li>
       </div>
     );

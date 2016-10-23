@@ -8,21 +8,10 @@ var hashHistory = require('react-router').hashHistory;
 
 var Project = require('./components/Project');
 var ProjectDetail = require('./components/ProjectDetail');
-var ProjectList = require('./components/ProjectList');
 var HomePage = require('./components/HomePage');
+var ProjectsPage = require('./components/ProjectsPage');
 var ContactPage = require('./components/ContactPage');
 var ProjectStore = require('./stores/ProjectStore');
-
-var ProjectsPage = React.createClass({
-  render: function() {
-    return (
-      <div className='page-header'>
-        <h1>Projects</h1>
-        <ProjectList projects={ProjectStore.getAll()} />
-      </div>
-    )
-  }
-});
 
 var ProjectDetailPage = React.createClass({
   render: function() {
@@ -35,15 +24,30 @@ var ProjectDetailPage = React.createClass({
 });
 
 var App = React.createClass({
+  componentDidMount: function() {
+    // $('page-link').click(function (e) {
+    //   e.preventDefault();
+
+    //   var target = this.hash;
+    //   var $target = $(target);
+
+    //   $('html, body').stop().animate({
+    //       scrollTop: $target.offset().top,
+    //   }, function () {
+    //       window.location.hash = target;
+    //   });
+    // });
+
+  },
   render: function() {
     return (
       <div>
-        <nav className="navbar navbar-inverse">
+        <nav className="navbar navbar-inverse navbar-fixed-top">
           <ul className="nav navbar-nav">
-            <li role="presentation"><Link to="/">Miles Lindheimer</Link></li>
-            <li role="presentation"><Link to="/">Home</Link></li>
-            <li role="presentation"><Link to="projects">Projects</Link></li>
-            <li role="presentation"><Link to="contact">Contact</Link></li>
+            <li role="presentation" className='page-link'><a href='#home'>Miles Lindheimer</a></li>
+            <li role="presentation" className='page-link'><a href='#home'>Home</a></li>
+            <li role="presentation" className='page-link'><a href='#projects'>Projects</a></li>
+            <li role="presentation" className='page-link'><a href='#contact'>Contact</a></li>
           </ul>
         </nav>
         {this.props.children}  
@@ -51,14 +55,15 @@ var App = React.createClass({
     )
   }
 });
-
+window.addEventListener("hashchange", function() { scrollBy(0, -50) });
 ReactDOM.render((
     <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
-      <Route path="projects" component={ProjectsPage}/>
+      <Route path="home" component={HomePage} />
+      <Route path="projects" component={HomePage} />
       <Route path="projects/:id" component={ProjectDetailPage}/>
-      <Route path="contact" component={ContactPage}/>
+      <Route path="contact" component={HomePage} />
     </Route>
   </Router>
   ), document.getElementById('content')
