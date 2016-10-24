@@ -16,7 +16,7 @@ a:hover {
 }
 
 .contact-info {
-    text-align: center;
+  text-align: center;
 }
 
 .row {
@@ -24,22 +24,29 @@ a:hover {
 }
 
 .thumbnail {
-  padding: 0 0 15px 0;
+  padding: 30px 30px 30px 30px;
   border: none;
   border-radius: 0;
 }
 
 .thumbnail img {
-  height: 300px;
-  width: 300px;
-  margin-bottom: 10px;
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.thumbnail:hover  {
+.project-thumbnail { 
+  margin: auto; 
+  padding:10px; 
+}
+
+.project-thumbnail:hover  {
   background-color: lightgray;
 }
 
-.project-thumbnail {
+.project-thumbnail a {
   color: gray;
 }
 

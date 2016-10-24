@@ -16,7 +16,7 @@ var ProjectList = React.createClass({
     	);
   	});
     return (
-    	<div className='container-fluid text-center bg-grey'>
+    	<div className='container-fluid text-center projectlist'>
       	{projects}
     	</div>
     );

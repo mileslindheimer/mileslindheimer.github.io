@@ -9,12 +9,14 @@ var Project = React.createClass({
 	},
   render: function() {
     return (
+      <div className='col-sm-6 col-md-4 panel panel-default panel-body project-thumbnail'>
         <Link to={'projects/'+this.props.project.id}>
-      	<div className='col-sm-4 thumbnail project-thumbnail'>
+      	<div className='thumbnail'>
           <img src={this.props.project.img}/>
-      		<h4>{this.props.project.name}</h4>
       	</div>
+        <h4>{this.props.project.name}</h4>
         </Link>
+      </div>
     );
   }
 }); 

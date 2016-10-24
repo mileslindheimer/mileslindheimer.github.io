@@ -5,7 +5,7 @@ var ContactPage = React.createClass({
     return (
       <div>
         <h1>Contact</h1>
-          <div className="contact-info">
+          <div className="contact-info panel panel-default panel-body">
             <p><img src="img/contact/1a03c9b.jpg" /></p>
 
             <p>Email: <strong><a href=
