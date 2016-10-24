@@ -25,37 +25,41 @@ var ProjectDetailPage = React.createClass({
 
 var App = React.createClass({
   componentDidMount: function() {
-    // $('page-link').click(function (e) {
-    //   e.preventDefault();
-
-    //   var target = this.hash;
-    //   var $target = $(target);
-
-    //   $('html, body').stop().animate({
-    //       scrollTop: $target.offset().top,
-    //   }, function () {
-    //       window.location.hash = target;
-    //   });
-    // });
-
+    $("button").mouseup(function(){
+      $(this).blur();
+    });
+    $('button').click(function(){
+      $('.collapse').collapse('toggle')
+    });
   },
   render: function() {
     return (
       <div>
         <nav className="navbar navbar-inverse navbar-fixed-top">
-          <ul className="nav navbar-nav">
-            <li role="presentation" className='page-link'><a href='#home'>Miles Lindheimer</a></li>
-            <li role="presentation" className='page-link'><a href='#home'>Home</a></li>
-            <li role="presentation" className='page-link'><a href='#projects'>Projects</a></li>
-            <li role="presentation" className='page-link'><a href='#contact'>Contact</a></li>
-          </ul>
+          <div className="container-fluid">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="#home">Miles Lindheimer</a>
+            </div>
+            <div className="collapse navbar-collapse" id="myNavbar">
+              <ul className="nav navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
         {this.props.children}  
       </div>
     )
   }
 });
-window.addEventListener("hashchange", function() { scrollBy(0, -50) });
+
 ReactDOM.render((
     <Router history={hashHistory}>
     <Route path="/" component={App}>
