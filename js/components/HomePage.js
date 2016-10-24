@@ -16,7 +16,7 @@ var HomePage = React.createClass({
 	    		<a name="home" id="home" className='anchor'></a>
 	      	<h1>Welcome</h1>
 	      	<img src='../../img/welcome.jpg'  width='600px'/>
-	      	<p>Below are a few of the projects I've been working on as of late</p>
+	      	<p>Below are a few of the projects I've been working on lately</p>
 	      </div>
 	      <div className='jumbotron'>
 	      	<a name="projects" id="projects" className='anchor'></a>
