@@ -8,6 +8,7 @@ var ProjectDetail = React.createClass({
 		});
 	},
   render: function() {
+    var display = this.props.project.github ? '' : 'none';
     return (
       <div className='jumbotron'>
       <a href='#projects' className='btn btn-default back' role='button'>Back</a>
@@ -21,6 +22,9 @@ var ProjectDetail = React.createClass({
       	</h4>
       	<div className='list-group-item-text'>
         	{this.props.project.description}
+        </div>
+        <div className='github-link' style={{display: display}}>
+          <a href={this.props.project.github} target="_blank">Github Link</a>
         </div>
     	</li>
       </div>
