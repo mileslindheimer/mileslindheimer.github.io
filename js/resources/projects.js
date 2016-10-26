@@ -60,19 +60,22 @@ var projects = [
     id: 'dnsresolver',
     name: 'Distributed DNS Resolver', 
     img: 'img/thumbnails/dns-rev-1.gif',
-    description: 'Implemented non-blocking symmetric hash join within Spark’s source code for a DNS resolve'
+    description: 'Implemented non-blocking symmetric hash join within Spark’s source code for a DNS resolve',
+    github: 'https://github.com/mileslindheimer/cs186_projects/tree/master/hw4'
   },
   {
     id: 'opticalflow',
     name: 'Optical Flow Gesture Tracker', 
     img: 'img/thumbnails/opticalflow.jpg',
-    description: 'Detects and tracks hand gestures using Pyramidal Lucas-Kanade method for optical flow analysis'
+    description: 'Detects and tracks hand gestures using Pyramidal Lucas-Kanade method for optical flow analysis',
+    github: 'https://github.com/mileslindheimer/optical-flow'
   },
   {
     id: 'udfcache',
     name: 'User-Defined Function Caching', 
     img: 'img/thumbnails/udfcaching.png',
-    description: 'Implemented disk hash-partitioning and UDF caching in a distributed computing framework'
+    description: 'Implemented disk hash-partitioning and UDF caching in a distributed computing framework',
+    github: 'https://github.com/mileslindheimer/cs186_projects/tree/master/hw2'
   }
 ];
 

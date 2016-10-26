@@ -14,9 +14,11 @@ var HomePage = React.createClass({
     	<div>
 	    	<div className='jumbotron'>
 	    		<a name="home" id="home" className='anchor'></a>
-	      	<h1>Welcome</h1>
-	      	<img src='../../img/welcome.jpg'  width='600px'/>
-	      	<p>Below are a few of the projects I've been working on lately</p>
+		      <h1>Welcome</h1>
+		      	<div className='panel panel-default panel-body'>
+		      	<img src='../../img/welcome.jpg'  width='600px'/>
+		      	<p>Below are a few of the projects I've been working on lately</p>
+		      </div>
 	      </div>
 	      <div className='jumbotron'>
 	      	<a name="projects" id="projects" className='anchor'></a>
