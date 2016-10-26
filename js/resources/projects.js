@@ -55,6 +55,24 @@ var projects = [
     name: 'Word Co-Occurence', 
     img: 'img/thumbnails/mapreduce_thumbnail.png',
     description: 'Calculates co-occurrence rates in large texts'
+  },
+  {
+    id: 'dnsresolver',
+    name: 'Distributed DNS Resolver', 
+    img: 'img/thumbnails/dns-rev-1.gif',
+    description: 'Implemented non-blocking symmetric hash join within Spark’s source code for a DNS resolve'
+  },
+  {
+    id: 'opticalflow',
+    name: 'Optical Flow Gesture Tracker', 
+    img: 'img/thumbnails/opticalflow.jpg',
+    description: 'Detects and tracks hand gestures using Pyramidal Lucas-Kanade method for optical flow analysis'
+  },
+  {
+    id: 'udfcache',
+    name: 'User-Defined Function Caching', 
+    img: 'img/thumbnails/udfcaching.png',
+    description: 'Implemented disk hash-partitioning and UDF caching in a distributed computing framework'
   }
 ];
 
