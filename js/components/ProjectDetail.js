@@ -8,7 +8,8 @@ var ProjectDetail = React.createClass({
 		});
 	},
   render: function() {
-    var display = this.props.project.github ? '' : 'none';
+    var hasGithubLink = this.props.project.github ? '' : 'none';
+    var hasWebsiteLink = this.props.project.website ? '' : 'none';
     return (
       <div className='jumbotron'>
       <h1>
@@ -21,7 +22,10 @@ var ProjectDetail = React.createClass({
       		<img src={this.props.project.img} width='300'/>
       	</div>
         <p>{this.props.project.description}</p>
-        <div className='github-link' style={{display: display}}>
+        <div style={{display: hasWebsiteLink}}>
+          <a href={this.props.project.website} target="_blank">Website</a>
+        </div>
+        <div className='github-link' style={{display: hasGithubLink}}>
           <a href={this.props.project.github} target="_blank">Github Link</a>
         </div>
       </div>

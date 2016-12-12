@@ -1,4 +1,12 @@
 var projects = [
+  {
+    id: 'musicstore',
+    name: 'Miles Music Store', 
+    img: 'img/projects/musicstore/flugelhorn.jpg',
+    description: 'Demo ecommerce application written in Java and JavaScript using Spring Boot, Spring Data, React, Flux and Postgres, deployed on Heroku',
+    github: 'https://github.com/mileslindheimer/miles-music-store',
+    website: 'https://miles-music-store.herokuapp.com'
+  },
 	{
 		id: 'imageprocessing',
 		name: 'Convolution Optimization', 
